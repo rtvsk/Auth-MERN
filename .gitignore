@@ -1,2 +1,5 @@
 ## Packages
 node_modules
+
+## Config
+config/keys.js
