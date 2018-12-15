@@ -1,17 +1,17 @@
-const mongoose = require('mongoose');
 const Validator = require('validator');
+const isEmpty = require('is-empty');
 
 module.exports = function validateRegisterInput(data) {
     let errors = {};
 
     // Convert empty fields => empty strings
-    data.email = !isEmpty(data.email) ? data.email : "",
+    data.email = !isEmpty(data.email) ? data.email : "";
     data.password = !isEmpty(data.password) ? data.password : "";
 
     // Email check
     if (Validator.isEmpty(data.email)) {
         errors.email = "Email field is Required";
-    } else if (!Validator.isEmail(date.email)) {
+    } else if (!Validator.isEmail(data.email)) {
         errors.email = "Email is invalid";
     }
 
