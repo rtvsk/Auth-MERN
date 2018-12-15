@@ -1,5 +1,8 @@
-## Packages
+## Server node_modules
 node_modules
 
 ## Config
 config/keys.js
+
+## Client node_modules
+client/node_modules
